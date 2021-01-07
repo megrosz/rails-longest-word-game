@@ -1,0 +1,14 @@
+<h1 class="banner">new game</h1>
+<%=@letters%>
+<br>
+<br>
+<h2>what is the longest word you can find?</h2>
+<form action="/score" method="POST">
+  <input type="text" name="word">
+  <input type="submit" value="Play">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+
+</form>
+
+<!-- # send the letters to the score using hidden field tag
+check if the word is made up of the letters -->
